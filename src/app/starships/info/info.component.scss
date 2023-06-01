@@ -1,0 +1,150 @@
+.mini-saber {
+    color: white;
+    display: block;
+    padding-top:10px;
+    
+    &::before, &::after{
+        margin-top: -12px;
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 45px;
+        border-radius: 3px;
+        border-left: 30px solid lightGray;
+        border-right: 10px solid lightGray;
+        box-shadow: 4px 0 8px 0px rgb(0 0 0 / 0%);
+    }
+}
+
+#starship-info, .pilot-info, .film-info {
+    &:hover{
+        .mini-saber {
+            &::before, &::after {
+                border-left: 30px solid white;
+                border-right: 10px solid white;
+                box-shadow: -15px 0px 10px 0px rgb(255, 255, 255);
+            }
+        }
+    }
+}
+
+#starship-info{
+    
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    background-color: darkGray;
+    flex-grow: 1;
+    .img-starship{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding-bottom: 60%;
+        position: relative;
+    }
+    .txt-info{
+        padding: 30px;
+        
+        h1{
+            text-transform: uppercase;
+            color: $white;
+            margin-bottom: 20px;
+        }
+    }
+    @media (min-width: 992px) {
+        border-radius: 8px 0 0 8px;
+    }
+}
+
+#starship-description{
+    
+    border-radius: 0px 0px 8px 8px;
+    flex-shrink: 3;
+    overflow: hidden;
+    background-color: darkGray;
+    
+    @media (min-width: 992px) {
+        min-width: 470px;
+    }
+    
+    .txt-description {
+        position: relative;
+        padding: 30px;
+        &::before{
+            position: absolute;
+            top:0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 50px;
+        }
+        h4{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: $white;
+            text-transform: uppercase;
+        }
+        p{
+            margin-bottom: 0px;
+            @media (min-width: 992px) {
+                max-width: 400px;
+            }
+        }
+
+        span{
+            max-width: 300px;
+        }
+
+    }
+    
+    @media (min-width: 992px) {
+        border-radius: 0px 8px 8px 0px;
+    }
+    
+}
+
+h2 {
+    color: white;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: start;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#extra-info-pilots, #extra-info-films {
+    .pilot-info, .film-info{
+        width: calc(50% - 8px);
+
+        @media (min-width: 576px) {
+            width: calc(33.333% - 8px);
+        }
+
+        @media (min-width: 768px) {
+            width: calc(25% - 8px);
+        }
+    }
+    .pilot-img, .film-img{
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    div p {
+        display: inline-block;
+        font-weight: 500;
+        color: white;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        
+    }
+
+
+}

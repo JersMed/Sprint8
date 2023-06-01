@@ -1,0 +1,18 @@
+<ng-container *ngIf="starshipsList">
+
+    <div class="d-flex flex-column starshipList gap-3" (scroll)="onScroll()">
+        <div [id]="'starshipElement-' + index" class="d-flex flex-column align-items-end"
+            *ngFor="let starship of starshipsList.results; let index = index"
+            [routerLink]="['/starships', getStarshipId(starship.url)]">
+            <a class="starship-card d-flex flex-column">
+                <h4>{{ starship.name }}</h4>
+                <p>{{ starship.model }}</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- <ng-container *ngIf="loading">
+        <app-loading></app-loading>
+    </ng-container> -->
+
+</ng-container>
