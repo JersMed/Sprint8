@@ -1,0 +1,42 @@
+<header class="d-flex flex-column">
+    <div id="main" class="header d-flex justify-content-between">
+
+        <div id="social" class="d-none d-md-flex justify-content-start mt-4 ms-3 gap-4 ">
+            <a class="social-icon d-flex" href="http://www.facebook.com/starwars" target="_blank"><i
+                    class="fa-brands fa-square-facebook"></i></a>
+            <a class="social-icon d-flex" href="http://www.instagram.com/starwars" target="_blank"><i
+                    class="fa-brands fa-square-instagram"></i></a>
+            <a class="social-icon d-flex" href="http://www.youtube.com/starwars" target="_blank"><i
+                    class="fa-brands fa-square-youtube"></i></a>
+            <a class="social-icon d-flex" href="http://www.twitter.com/starwars" target="_blank"><i
+                    class="fa-brands fa-square-twitter"></i></a>
+        </div>
+
+        <div id="logo" class="d-flex align-items-center justify-content-center">
+
+            <a [routerLink]="[ '' ]" class="logo d-flex d-md-none ms-3 ms-md-0 align-items-center">
+                <img id="logo_hz" alt="Star Wars" src="../../../../assets/img/sw_logo_horiz.webp">
+            </a>
+
+            <a [routerLink]="[ '/' ]" class="logo d-none d-md-flex align-items-center mt-4">
+                <img id="logo_stacked" alt="Star Wars" src="../../../../assets/img/sw_logo_stacked.webp">
+            </a>
+        </div>
+
+        <div id="login" class="d-flex justify-content-end mt-4 me-3 gap-4">
+
+            <span *ngIf="!isLogged">
+                <a class="link-style menu-text" [routerLink]="['account/login']"><b>Login</b></a>
+            </span>
+            <span *ngIf="isLogged">
+                <a class="link-style menu-text" (click)="logout()"><b>Logout</b></a>
+            </span>
+            <span class="link-style" [routerLink]="[ '/register' ]" *ngIf="!isLogged">
+                <img id="user_icon" class="d-none d-sm-inline-flex" src="../../../../assets/img/sw_Oneid_User.svg"> Sign
+                Up
+            </span>>
+
+        </div>
+    </div>
+    <app-menu></app-menu>
+</header>

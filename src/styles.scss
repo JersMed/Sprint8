@@ -1,0 +1,87 @@
+@import "https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;300;600;700;900&family=Lato:ital,wght@0,300;0,900;1,700&display=swap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
+
+
+app-header{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    // font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    background-color: black;
+}
+
+.container{
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+    margin-top: 250px;
+    margin-bottom: 80px;
+}
+
+* {
+    box-sizing: border-box;
+
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+
+    &:not(.no-animated):not(.slick-track):not(.slick-slide){
+        -moz-transition: all .15s ease-out;
+        -webkit-transition: all .15s ease-out;
+        -ms-transition: all .15s ease-out;
+        -o-transition: all .15s ease-out;
+        transition: all .15s ease-out;
+        &::after,
+        &::before{
+            -moz-transition: all .15s ease-out;
+            -webkit-transition: all .15s ease-out;
+            -ms-transition: all .15s ease-out;
+            -o-transition: all .15s ease-out;
+            transition: all .15s ease-out;
+        }
+    }
+    
+}
+
+#content {
+    min-height: calc(100vh - 188px);
+}
+
+::-moz-selection { 
+    color: black;
+    background: yellow;
+}
+
+::selection {
+    color: black;
+    background: yellow;
+}
+
+.text-warning {
+    --bs-text-opacity: 1;
+    color: rgba(yellow, var(--bs-text-opacity)) !important;
+}
+
+.link-style {
+    text-transform: uppercase;
+    color: defaultColor;
+    text-decoration: none; 
+    cursor: pointer;
+
+        &:hover{
+            color:white;
+
+            img {
+                border-color: rgb(0, 255, 255);
+                filter: drop-shadow(0px 0px 2px rgb(0, 255, 255));
+            }
+                
+        }
+}

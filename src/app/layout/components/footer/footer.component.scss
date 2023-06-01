@@ -1,0 +1,26 @@
+footer{
+    background-color: black;
+    width: 100%;
+    padding: 30px 32px 5px 32px;
+    border-bottom: 1px solid gray;
+    color: white;
+
+    font-size: 0.875rem;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    
+    p, a{
+        font-size: 0.875rem;
+    }
+    i{
+        color: white;
+        font-size: 2em;
+        z-index:9;
+    }
+    i:hover{
+        color: yellow;
+        border-color: yellow;
+        filter: drop-shadow(0px 0px 5px yellow);
+        z-index: 5;
+    }
+}
