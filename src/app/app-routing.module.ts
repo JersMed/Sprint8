@@ -1,4 +1,3 @@
-import { InfoComponent } from './starships/info/info.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -6,6 +5,7 @@ import { HomeComponent } from './home';
 import { LoginComponent, RegisterComponent } from './account';
 import { AuthGuard } from './_helpers';
 import { StarshipsComponent } from './starships/starships.component';
+import { InfoComponent } from './starships/info/info.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },

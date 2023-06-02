@@ -10,7 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
 import { LoginComponent, RegisterComponent } from './account';
-import { LayoutModule } from './layout/layout.module';
+import { CommonModule } from '@angular/common';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
     imports: [
@@ -18,12 +19,13 @@ import { LayoutModule } from './layout/layout.module';
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
-        LayoutModule
+        CommonModule
     ],
     declarations: [
         AppComponent,
         LoginComponent,
         RegisterComponent,
+        LayoutComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
