@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { StarshipsComponent } from './starships.component';
 import { InfoComponent } from './info/info.component';
 import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 

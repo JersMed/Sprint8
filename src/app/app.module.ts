@@ -12,20 +12,23 @@ import { AppComponent } from './app.component';
 import { LoginComponent, RegisterComponent } from './account';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
+import { LayoutModule } from './layout/layout.module';
+import { StarshipsComponent } from './starships/starships.component';
+import { StarshipsModule } from './starships/starships.module';
 
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule,
-        CommonModule
+        CommonModule,
+        LayoutModule,
+        StarshipsModule
     ],
     declarations: [
         AppComponent,
         LoginComponent,
         RegisterComponent,
-        LayoutComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -12,9 +12,9 @@ const routes: Routes = [
     { path: 'account/login', component: LoginComponent },
     { path: 'account/register', component: RegisterComponent },
     { path: 'starships', component: StarshipsComponent },
-    { path: 'info', component: InfoComponent },
+    { path: 'starships/:id', component: InfoComponent },
     // otherwise redirect to home
-    { path: '**', redirectTo: 'app-home' }
+    { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { SwapiService } from './services/swapi.service';
 import { StarshipsList } from '@app/interfaces/swapi.starships.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-starships',
@@ -18,7 +19,10 @@ export class StarshipsComponent implements OnInit {
 
   @Input() showClasses: boolean = true;
 
-  constructor(private swapiService: SwapiService) { }
+  constructor(
+    private swapiService: SwapiService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.getStarships(this.page!);
@@ -36,6 +40,7 @@ export class StarshipsComponent implements OnInit {
 
     this.swapiService.getStarships(page).subscribe(starshipsList => {
       tempStarshipsList.results = starshipsList.results;
+      console.log(tempStarshipsList)
       this.starshipsList.results = [...this.starshipsList.results, ...tempStarshipsList.results];
 
       this.page! = Number(starshipsList.next?.split('=')[1]);
@@ -62,6 +67,9 @@ export class StarshipsComponent implements OnInit {
   }
 
   getStarshipId(url: string) {
-    return url.split('/')[5];
+    const pepe = url.split('/')[5];
+    console.log();
+    this.router.navigateByUrl(`starships/${pepe}`)
+
   }
 }
