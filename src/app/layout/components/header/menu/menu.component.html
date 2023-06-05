@@ -1,14 +1,15 @@
-<div id="menu">
-    <ul class="d-flex flex-md-row justify-content-center align-items-center gap-4">
-        <li class="link-style">
-            <a [routerLink]="[ '/' ]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+<nav id="menu">
+    <ul class="nav d-flex flex-md-row justify-content-center align-items-center gap-4">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">
                 Home
             </a>
         </li>
-        <li class="link-style">
-            <a [routerLink]="[ '/starships' ]" routerLinkActive="active">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/starships']" routerLinkActive="active">
                 Starships
             </a>
         </li>
     </ul>
-</div>
+</nav>
