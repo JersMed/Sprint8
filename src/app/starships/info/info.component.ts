@@ -3,9 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 
 import { SwapiService } from '../services/swapi.service';
 
-import { Starship, StarshipsList } from '@app/interfaces/swapi.starships.interface';
+import { Starship } from '@app/interfaces/swapi.starships.interface';
 import { Film } from '@app/interfaces/swapi.films.interface';
-import { Pilot, PilotsList } from '@app/interfaces/swapi.pilots.interface';
+import { Pilot } from '@app/interfaces/swapi.pilots.interface';
 
 
 @Component({

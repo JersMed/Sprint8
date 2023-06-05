@@ -11,7 +11,7 @@ const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'account/login', component: LoginComponent },
     { path: 'account/register', component: RegisterComponent },
-    { path: 'starships', component: StarshipsComponent },
+    { path: 'starships', component: StarshipsComponent, canActivate: [AuthGuard] },
     { path: 'starships/:id', component: InfoComponent },
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

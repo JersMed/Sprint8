@@ -1,7 +1,7 @@
 #menu {
   background-color: black;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border-bottom: 1px solid gray;
   border-top: 1px solid gray;
 }
@@ -29,7 +29,7 @@ a::after {
   background-color: transparent;
   border-radius: 4px;
   bottom: -2px;
-  transition: background-color 0.3s ease; /* Agregamos una transición para que el cambio de color sea suave */
+  transition: background-color 0.3s ease;
 }
 
 a.active {

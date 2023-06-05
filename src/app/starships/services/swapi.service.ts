@@ -5,7 +5,7 @@ import { Starship, StarshipsList } from '@app/interfaces/swapi.starships.interfa
 import { Pilot, PilotsList } from '@app/interfaces/swapi.pilots.interface';
 import { Film, FilmsList } from '@app/interfaces/swapi.films.interface';
 import { Observable } from 'rxjs';
-import { map, delay } from 'rxjs/operators';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
