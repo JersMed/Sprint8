@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "BROWSER=chrome ng serve",
-    "build": "ng build --browser chrome",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
