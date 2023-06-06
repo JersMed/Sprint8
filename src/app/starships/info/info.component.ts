@@ -7,7 +7,6 @@ import { Starship } from '@app/interfaces/swapi.starships.interface';
 import { Film } from '@app/interfaces/swapi.films.interface';
 import { Pilot } from '@app/interfaces/swapi.pilots.interface';
 
-
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
@@ -22,8 +21,8 @@ export class InfoComponent implements OnInit {
   public films: Film[] = [];
 
 
-  public starshipImg: string = "../../../../assets/img/default.webp"
-  public pilotImg: string = "../../../../assets/img/default.webp"
+  public starshipImg: string = "../../../assets/img/deafult.webp"
+  public pilotImg: string = "../../../assets/img/deafult.webp"
 
   constructor(
     public swapiService: SwapiService,
@@ -66,7 +65,7 @@ export class InfoComponent implements OnInit {
       },
       error: error => {
         if (error.status != 200) {
-          this.starshipImg = '../../../../assets/img/default.webp';
+          this.starshipImg = "../../../assets/img/deafult.webp";
         }
       },
     });

@@ -1,14 +1,5 @@
 {
-    "users": [
-      {
-        "id": "a@a.es",
-        "name": "a",
-        "lastname": "a",
-        "password": "Hola12",
-        "offers": false
-      }
-    ],
-    "starshipsImage": [
+  "starshipsImage": [
       {
         "id": 2,
         "url": "https://static.wixstatic.com/media/839712_cac07ad9620149e4b27bcf0506c1211e.jpg"

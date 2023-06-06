@@ -32,7 +32,7 @@
     
     border-radius: 8px 8px 0 0;
     overflow: hidden;
-    background-color: darkGray;
+    background-color:rgba(169, 169, 169, 0.266);
     flex-grow: 1;
     .img-starship{
         background-repeat: no-repeat;
@@ -60,13 +60,14 @@
     border-radius: 0px 0px 8px 8px;
     flex-shrink: 3;
     overflow: hidden;
-    background-color: darkGray;
+    background-color:rgba(169, 169, 169, 0.266);
     
     @media (min-width: 992px) {
         min-width: 470px;
     }
     
     .txt-description {
+        color: white;
         position: relative;
         padding: 30px;
         &::before{
